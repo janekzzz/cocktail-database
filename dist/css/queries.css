@@ -1,0 +1,43 @@
+@media only screen and (max-width: 750px) {
+  body {
+    font-size: 15px;
+  }
+  .recipe__ingredients ul li {
+    width: 100%;
+  }
+
+  .recipe__details {
+    flex-direction: column;
+  }
+  h3 {
+    letter-spacing: 0px;
+  }
+
+  .recipe__title h2 {
+    letter-spacing: 0px;
+    font-size: 200%;
+  }
+
+  .search-view {
+    flex: 0 0 70px;
+    margin: 10px auto 0 auto;
+  }
+  .recipe {
+    margin: 10px 0px 0 10px;
+  }
+  .recipe__title {
+    height: 150px;
+  }
+  .recipe__title-big {
+    height: 300px;
+  }
+
+  .likes__panel {
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    z-index: 10;
+    width: 70px;
+    font-size: 140%;
+  }
+}

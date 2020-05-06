@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    /*background: linear-gradient(to right bottom, #a29bfe, #0984e3);*/
+    background: #dcdde1;
+    height: 100vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+input,
+.search__likes{
+    box-shadow: 10px 10px 15px rgba(113, 128, 147, 0.4);
+    transition: box-shadow 0.5s, background-color 0.5s;
+    position:relative;
+}
+
+input:hover,
+.search__likes:hover {
+    box-shadow: 10px 10px 15px rgba(113, 128, 147, 0.7);
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+/* TOP */
+
+
+
+.head {
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 0px 15px;
+    
+}
+
+/* Search view */
+
+.view {
+    padding: 0px 15px;
+    max-width: 800px;
+    justify-content: space-around;
+    display: flex;
+    margin: auto;
+}
+
+.search-view {
+    flex: 0 0 100px;
+    margin: 10px auto 0 auto;
+}
+
+
+
+.search__bar {
+    
+    width: 100%;
+    display: flex;
+    
+    justify-content: space-between;
+    
+}
+
+.search__input {
+    margin: 0 auto;
+    height: 60px;
+    border-radius: 25px;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 120%;
+    flex: 1;
+}
+
+.search__likes {
+    color: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 60px;
+    text-align: right;
+    height: 60px;
+    background: white;
+    border-radius: 200px;
+    margin-left: 20px;
+    
+}
+
+.search__likes ion-icon {
+    font-size: 30px;
+}
+
+.search__item {
+    list-style: none; 
+}
+.search__item-thumbnail {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 110%
+}
+.search__item-thumbnail img {
+    filter: brightness(50%);
+    transition: filter 0.7s;
+}
+.search__item:hover .search__item-thumbnail img {
+    filter:brightness(90%);
+}
+
+.item-active .search__item-thumbnail img{
+    filter: brightness(90%)
+}
+.search__item-title {
+    font-size: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search__pagination-prev button,
+.search__pagination-next button {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
+    font-size: 25px;
+    border-radius: 200px;
+    background-color: white;
+    height: 30px;
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+/**RECIPE VIEW*/
+
+.recipe {
+    flex: 1;
+    
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10px 0px 0 20px;
+    box-shadow: 10px 10px 20px rgba(113, 128, 147, 0.4);
+    
+}
+
+.recipe-hidden {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.recipe__title {
+    text-transform: uppercase;
+    height: 200px;
+    
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s;
+    
+}
+
+.recipe__title-big {
+    height: 500px;
+}
+
+
+.recipe__title-like {
+    flex: 0 1 50px;
+    
+    text-align: right;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-right: 8px;
+    transition: font-size 0.6s;
+}
+
+.recipe__title-expand {
+    flex: 0 1 50px;
+    
+    text-align: left;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-left: 8px;
+    transition: font-size 0.6s;
+}
+
+.recipe__title-expand:hover {
+    font-size: 32px;
+}
+
+.recipe__title-like:hover {
+    font-size: 32px;
+}
+
+.recipe__title-headline{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.recipe__title h2 {
+    font-size: 300%;
+    font-weight: 100;
+    color: white;
+    letter-spacing: 15px;
+    padding: 15px 0px 15px 15px;
+    background: rgba(255, 255, 255, 0.0);
+    text-align: center;
+    
+}
+
+.recipe__details {
+    margin: 20px auto 40px auto;
+    display: flex;
+    
+    text-transform: uppercase;
+}
+
+.recipe__details div {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    font-size: 90%;
+    font-weight: 100;
+    color: #2f3640;
+}
+
+.recipe__instructions {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+
+.recipe__details div:last-child {
+    margin-right: 0px;
+}
+.recipe__details ion-icon {
+    margin-right: 10px;
+    font-size: 150%
+}
+
+h3 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 140%;
+    margin-bottom: 15px
+}
+
+.recipe__ingredients ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;  
+    margin-bottom: 50px;
+    
+}
+
+.recipe__ingredients ul li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #2f3640;
+    width: 33%;
+    justify-content: center;
+    padding: 5px;
+    text-decoration:wavy;
+}
+
+.recipe__ingredients ul a {
+    color:#2f3640;   
+    text-decoration: none;
+    
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+.recipe__ingredients ul a:visited {
+    color:#2f3640;   
+}
+
+
+.recipe__steps {
+    text-align: center;
+    
+}
+
+.recipe__steps div {
+    margin-bottom: 7px;
+}
+
+.recipe__steps-steps {
+    color: #2f3640;
+    padding-bottom: 20px;
+}
+
+footer {
+    margin: 20px auto 5px auto;
+   
+    max-width: 700px;
+    text-align: center;
+    font-size: 60%
+    
+}
+
+/*LIKED VIEW*/
+
+.search__likes:hover .likes__list {
+    display: inline-block;
+    opacity: 1;
+    transition: all 0.5s;
+}
+.search__likes:hover .likes__panel {
+    display: inline-block;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.likes__panel {
+    
+    position: absolute;
+    top: 90%;
+    opacity: 0;
+    z-index: 10; 
+    width: 100px;
+    font-size: 150%;
+    
+}
+
+.likes__list {
+    
+    display: none;
+    list-style: none; 
+   
+}
+
+
+
+.likes__item-thumbnail {
+    
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    
+}
+.likes__item-thumbnail img {
+    border-radius: 2000px;
+    filter: brightness(50%);
+    transition: filter 0.5s;
+}
+.likes__item:hover .likes__item-thumbnail img {
+    filter:brightness(90%);
+}
+
+.likes-active .likes__item-thumbnail img{
+    filter: brightness(90%)
+}
+.likes__item-title {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70%;
+}
+
